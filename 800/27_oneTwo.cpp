@@ -8,22 +8,27 @@ int main() {
         int n;
         cin>>n;
         vector<int>arr(n);
-        int mult1=1;
+         int count2=0;
         for (int i=0;i<n;i++) {
             cin>>arr[i];
-            mult1=mult1*arr[i];
+            if(arr[i]==2) {
+                count2++;
+            }
         }
-        int mult2=1;
-        int k=-1;
+        if (count2 % 2) {
+            cout<<-1<<endl;
+            continue;
+        }
+        int index=-1;
+        int count=0;
         for (int i=0;i<n;i++) {
-            mult2=mult2*arr[i];
-            mult1=mult1/arr[i];
-            if (mult1==mult2) {
-                k=i+1;
+            if (arr[i]==2)count++;
+            if (count==count2/2) {
+                index=i+1;
                 break;
             }
         }
-        cout<<k<<endl;
+        cout<<index<<endl;
     }
 
     return 0;
