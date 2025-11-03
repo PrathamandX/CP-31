@@ -7,7 +7,7 @@ int main() {
     while (t--) {
         int n;
         cin>>n;
-        vector<long long>vec(n);
+        vector<unsigned long long>vec(n);
         for (int i=0;i<n;i++) {
             cin>>vec[i];
         }
